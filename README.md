@@ -47,18 +47,25 @@ Demonstrate your understanding of this week's concepts by answering the followin
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
 - [ ] Push commits: `git push origin <firstName-lastName>`
 
+
+
+
+
+
+
+
+
+
 ### Task 2: Project Requirements
 
-Your finished project must include all of the following requirements:
-
-- [ ] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable but must have an id of "order-pizza")
-- [ ] A order form that has a "/pizza" route and shows the form
-- [ ] A form with an id of "pizza-form"
-- [.] A name text input field with an id of "name-input"
+- [x] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable but must have an id of "order-pizza")
+- [x] A order form that has a "/pizza" route and shows the form
+- [x] A form with an id of "pizza-form"
+- [x] A name text input field with an id of "name-input"
 - [ ] Validation for name and the error message is "name must be at least 2 characters" (Use this exact error message to make sure tests pass)
-- [.] A dropdown for pizza size with an id of "size-dropdown"
-- [.] A checklist for toppings - at least 4 (hint: name each separately!)
-- [.] Text input for special instructions with an id of "special-text"
+- [x] A dropdown for pizza size with an id of "size-dropdown"
+- [x] A checklist for toppings - at least 4 (hint: name each separately!)
+- [x] Text input for special instructions with an id of "special-text"
 - [ ] An Add to Order button that has an id of "order-button" and that submits form and returns a database record of name, size, toppings and special instructions
 
 Data should look something like
@@ -85,15 +92,9 @@ Implement the following tests in Cypress:
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
-### Task 3: Stretch Goals
 
-After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-- [ ] Toggle form component for gluten free crust
-- [ ] Turn form element sections into nested routes
-- [ ] Test more of the application with Cypress
-- [ ] Build UI for the eventuality of a network error when POSTing the order
-- [ ] Add functionality to your order button that it leads to a Congrats! Pizza is on it's way! page **and** returns a database record of the whole order
+
 
 ## FAQs
 
@@ -105,6 +106,25 @@ One of your goals is to return a database record of the order - for this you'll 
 2. Post to [reqres](https://reqres.in/) with `axios`
 3. Log data in console
 4. The URL you should use is `https://reqres.in/api/orders`. The tests are based on this URL.
+
+
+
+
+
+
+
+
+
+### Task 3: Stretch Goals
+
+After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
+
+- [ ] Toggle form component for gluten free crust
+- [ ] Turn form element sections into nested routes
+- [ ] Test more of the application with Cypress
+- [ ] Build UI for the eventuality of a network error when POSTing the order
+- [ ] Add functionality to your order button that it leads to a Congrats! Pizza is on it's way! page **and** returns a database record of the whole order
+
 
 ## Submission format
 

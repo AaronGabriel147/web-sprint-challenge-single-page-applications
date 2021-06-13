@@ -17,17 +17,22 @@ export default function Form() {
         name:"",
     })
 
-// The ternary is checking the "type" and if it is "checkbox" it will return whatever the "checked" value is.
+// The ternary is checking the "type" and if it is "checkbox," it will return whatever the "checked" value is.
     const handleChange = e => {
         const { name, value, checked, type } = e.target
-        const x = type === "checkbox" ? checked : value;
-        setData({ ...data, [name]: x})
+        const values = type === "checkbox" ? checked : value;
+        setData({ ...data, [name]: values})
+    }
+
+    // Need to add more to this.
+    const formSubmit = (e) => {
+        e.preventDefault();
     }
 
     return (
         <div>
             <h2>Build Your Own Pizza</h2>
-            <form id="pizza-form">
+            <form id="pizza-form" onSubmit={formSubmit}>
                 <label>
                     <h3>Choice of Size</h3>
                     <select value={data.size} name="size" onChange={handleChange} id="size-dropdown">
@@ -37,34 +42,37 @@ export default function Form() {
                     </select>    
                 </label>
                 <label>
+                    {/* Radio boxes need their 'value' and 'checked' to match, and they can be named anything. */}
                     <p>Red Sauce</p>
-                    <input type="radio" value="a" name="sauce" onChange={handleChange} checked={data.sauce === "a"}/>
+                    <input type="radio" value="Red Sauce" name="sauce" onChange={handleChange} checked={data.sauce === "Red Sauce"}/>
                     <p>Ranch Garlic</p>
-                    <input type="radio" value="b" name="sauce" onChange={handleChange} checked={data.sauce === "b"}/>
+                    <input type="radio" value="Ranch Garlic Sauce" name="sauce" onChange={handleChange} checked={data.sauce === "Ranch Garlic Sauce"}/>
                     <p>Alfredo Sauce</p>
-                    <input type="radio" value="c" name="sauce" onChange={handleChange} checked={data.sauce === "c"}/>
+                    <input type="radio" value="Alfredo Sauce" name="sauce" onChange={handleChange} checked={data.sauce === "Alfredo Sauce"}/>
                 </label>
                 <label>
+                    {/* Check boxes need some special logic, as seen above with the handleChange ternary. */}
                     <h3>Add Toppings</h3>
                     <p>Pepperoni</p>
                     <input type="checkbox" onChange={handleChange} name="topping1" checked={data.topping1} />
                     <p>Olives</p>
                     <input type="checkbox" onChange={handleChange} name="topping2" checked={data.topping2} />
                     <p>Mushrooms</p>
-                    <input type="checkbox" onChange={handleChange} name="topping3" checked={data.topping3}  />
+                    <input type="checkbox" onChange={handleChange} name="topping3" checked={data.topping3} />
                     <p>Bell Peppers</p>
-                    <input type="checkbox" onChange={handleChange} name="topping4" checked={data.topping4}  />
+                    <input type="checkbox" onChange={handleChange} name="topping4" checked={data.topping4} />
                 </label>
                 <label>
                     <h3>Special Instructions</h3>
-                    <input type="text" id="special-text" onChange={handleChange} />
+                    <input type="text" value={data.instructions} name="instructions" id="special-text" onChange={handleChange} />
                 </label>
                 <label>
                     <h3>Enter your name.</h3>
-                    <input type="text" id="name-input" onChange={handleChange} />
+                    <input type="text" id="name-input" value={data.name} name="name" onChange={handleChange} />
                 </label>
-                <button>Add to Order</button>
+                <button type="submit">Add to Order</button>  {/* I do not think the 'type' is always necessary. */}
             </form>    
         </div>
     )
 }
+// instructions and name not linked to state yet. 
